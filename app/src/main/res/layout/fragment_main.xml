@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/foreground_color"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".login.MainFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hr_guideline_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hr_guideline_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vr_guideline_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vr_guideline_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95"/>
+
+    <ImageView
+            android:id="@+id/top_bar_imageview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/hr_guideline_2"
+            android:src="@drawable/app_logo_1"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/app_name"
+            android:background="@color/colorAccent"
+            android:padding="50dp"
+            android:elevation="@dimen/card_elevation"
+            />
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/main_viewpager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hr_guideline_2"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:0.16"
+            app:layout_constraintStart_toStartOf="@id/vr_guideline_1"
+            app:layout_constraintEnd_toEndOf="@id/vr_guideline_2"
+            app:layout_constraintTop_toBottomOf="@id/hr_guideline_1"
+            app:contentPadding="10dp"
+            app:cardCornerRadius="@dimen/card_background_corner_radius"
+            app:cardBackgroundColor="@color/foreground_color"
+            >
+
+        <com.google.android.material.tabs.TabLayout
+                android:id="@+id/main_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                app:tabMaxWidth="0dp"
+                app:tabTextColor="@color/tab_text_color"
+                app:tabSelectedTextColor="@android:color/white"
+                app:tabIndicator="@android:color/transparent"
+                app:tabBackground="@drawable/tab_background"
+                app:tabTextAppearance="@style/AppTheme.TabTextViewTheme"
+                app:tabRippleColor="@color/accent_ripple_color">
+
+            <com.google.android.material.tabs.TabItem
+                    android:id="@+id/login_tab_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login"
+            />
+
+            <com.google.android.material.tabs.TabItem
+                    android:id="@+id/signup_tab_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_up"
+            />
+        </com.google.android.material.tabs.TabLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

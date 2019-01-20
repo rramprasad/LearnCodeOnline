@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#40CF7B</color>
+    <color name="colorPrimaryDark">#40CF7B</color>
+    <color name="colorAccent">#40CF7B</color>
+    <color name="accent_ripple_color">#73DBA0</color>
+    <color name="card_background_color">#FFFFFF</color>
+    <color name="foreground_color">#f4f4f4</color>
+    <color name="tab_text_color">#BEBABA</color>
+    <color name="edittext_color">#BEBABA</color>
+    <color name="edittext_hint_color">#BEBABA</color>
+    <color name="edittext_text_color">#000000</color>
+    <color name="button_background_color_normal">@color/colorAccent</color>
+    <color name="button_background_color_selected">#73DBA0</color>
+    <color name="button_background_color_pressed">#73DBA0</color>
+    <color name="gray_text_color">#BEBABA</color>
+</resources>
